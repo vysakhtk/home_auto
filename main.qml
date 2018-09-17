@@ -56,38 +56,41 @@ ApplicationWindow {
         id: tabBar
         currentIndex: swipeView.currentIndex
         background: Rectangle {
-            color: "white"
+            color: "transparent"
         }
-
         TabButton {
-            text: qsTr("Welcome_page")
-            spacing: 5
-            background: Rectangle {
-                color: "#00b33c"
+            text: qsTr("Welcome")
+            background: Rectangle
+            {
+                color: tabBar.currentIndex == 0 ? "transparent" : "#00b33c"
             }
         }
         TabButton {
-            text: qsTr("Members_page")
-            background: Rectangle {
-                color: "#00b33c"
+            text: qsTr("Members")
+            background: Rectangle
+            {
+                color: tabBar.currentIndex == 1 ? "transparent" : "#00b33c"
             }
         }
         TabButton {
-            text: qsTr("PhotoGallery_page")
-            background: Rectangle {
-                color: "#00b33c"
+            text: qsTr("Photos")
+            background: Rectangle
+            {
+                color: tabBar.currentIndex == 2 ? "transparent" : "#00b33c"
             }
         }
         TabButton {
-            text: qsTr("Controls_page")
-            background: Rectangle {
-                color: "#00b33c"
+            text: qsTr("Controls")
+            background: Rectangle
+            {
+                color: tabBar.currentIndex == 3 ? "transparent" : "#00b33c"
             }
         }
         TabButton {
-            text: qsTr("Events_page")
-            background: Rectangle {
-                color: "#00b33c"
+            text: qsTr("Events")
+            background: Rectangle
+            {
+                color: tabBar.currentIndex == 4 ? "transparent" : "#00b33c"
             }
         }
     }

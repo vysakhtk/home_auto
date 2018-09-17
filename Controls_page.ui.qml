@@ -6,13 +6,13 @@ Page {
     height: 400
 
     header: Label {
-        text: qsTr("Page 4")
+        text: qsTr("Controls_page")
         font.pixelSize: Qt.application.font.pixelSize * 2
         padding: 10
     }
 
     Label {
-        text: qsTr("You are on Page 4.")
+        text: qsTr("You are on Controls_page.")
         anchors.centerIn: parent
     }
 }

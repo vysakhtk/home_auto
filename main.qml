@@ -13,39 +13,40 @@ ApplicationWindow {
         id: swipeView
         anchors.fill: parent
         currentIndex: tabBar.currentIndex
+
         Loader
         {
-            active: SwipeView.isCurrentItem||SwipeView.isPreviousItem
-            sourceComponent:Page1Form {
+            active: SwipeView.isCurrentItem||SwipeView.isPreviousItem||SwipeView.isNextItem
+            sourceComponent: Welcome_page {
                 anchors.fill:window
             }
         }
         Loader
         {
-            active: SwipeView.isCurrentItem||SwipeView.isPreviousItem
-            sourceComponent: Page2Form {
+            active: SwipeView.isCurrentItem||SwipeView.isPreviousItem||SwipeView.isNextItem
+            sourceComponent: Members_page {
                 anchors.fill:window
             }
         }
 
         Loader
         {
-            active: SwipeView.isCurrentItem||SwipeView.isPreviousItem
-            sourceComponent:Page3Form {
+            active: SwipeView.isCurrentItem||SwipeView.isPreviousItem||SwipeView.isNextItem
+            sourceComponent:PhotoGallery_page {
                 anchors.fill:window
             }
         }
         Loader
         {
-            active: SwipeView.isCurrentItem||SwipeView.isPreviousItem
-            sourceComponent:Page4Form {
+            active: SwipeView.isCurrentItem||SwipeView.isPreviousItem||SwipeView.isNextItem
+            sourceComponent:Controls_page {
                 anchors.fill:window
             }
         }
         Loader
         {
-            active: SwipeView.isCurrentItem||SwipeView.isPreviousItem
-            sourceComponent:Page5Form {
+            active: SwipeView.isCurrentItem||SwipeView.isPreviousItem||SwipeView.isNextItem
+            sourceComponent:Events_page {
                 anchors.fill:window
             }
         }
@@ -59,32 +60,32 @@ ApplicationWindow {
         }
 
         TabButton {
-            text: qsTr("Page 1")
+            text: qsTr("Welcome_page")
             spacing: 5
             background: Rectangle {
                 color: "#00b33c"
             }
         }
         TabButton {
-            text: qsTr("Page 2")
+            text: qsTr("Members_page")
             background: Rectangle {
                 color: "#00b33c"
             }
         }
         TabButton {
-            text: qsTr("Page 3")
+            text: qsTr("PhotoGallery_page")
             background: Rectangle {
                 color: "#00b33c"
             }
         }
         TabButton {
-            text: qsTr("Page 4")
+            text: qsTr("Controls_page")
             background: Rectangle {
                 color: "#00b33c"
             }
         }
         TabButton {
-            text: qsTr("Page 5")
+            text: qsTr("Events_page")
             background: Rectangle {
                 color: "#00b33c"
             }

@@ -1,5 +1,6 @@
 import QtQuick 2.10
 import QtQuick.Controls 2.3
+import QtQuick.Controls.Material 2.2
 
 Page {
     id: page
@@ -7,6 +8,17 @@ Page {
     height: 450
     font.family: "Courier"
     font.pointSize: 26
+
+    RoundButton {
+        id: roundButton
+        x: 45
+        y: 25
+        width: 33
+        height: 34
+        font.pixelSize: 20
+        text: ">"
+        onClicked: drawer.open();
+    }
 
     Rectangle {
         id: rectangle
@@ -71,30 +83,30 @@ Page {
         }
     }
 
-    SwitchDelegate {
-        id: switchDelegate
-        x: 508
-        y: 178
-        width: 149
-        height: 34
-        font.pixelSize: 20
-        text: qsTr("Auto")
-        wheelEnabled: false
-        topPadding: 12
-        opacity: 1
-        anchors.right: rectangle.right
-        anchors.rightMargin: -14
-        anchors.top: parent.top
-        anchors.topMargin: 25
-        autoExclusive: false
-    }
-
-    RoundButton {
-        id: roundButton
-        x: 49
+    Rectangle {
+        id: rectangle1
+        x: 467
         y: 25
-        width: 33
+        width: 177
         height: 34
-        text: "+"
+        color: "#ffffff"
+        anchors.right: rectangle.right
+        anchors.rightMargin: 0
+
+        SwitchDelegate {
+            id: switchDelegate
+            text: checked ? " Auto" : "Manual"
+            anchors.leftMargin: 45
+            anchors.topMargin: 0
+            anchors.rightMargin: -31
+            anchors.bottomMargin: 0
+            font.pixelSize: 18
+            anchors.fill: parent
+            focusPolicy: Qt.StrongFocus
+            wheelEnabled: false
+            topPadding: 12
+            opacity: 1
+            autoExclusive: false
+        }
     }
 }

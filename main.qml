@@ -9,13 +9,67 @@ ApplicationWindow {
     height: 450
     title: qsTr("Tabs")
 
+    Drawer {
+        id: drawer
+        width: 0.30*window.width
+        height: window.height
+        bottomPadding: 0
+        bottomMargin: 0
+
+        Rectangle {
+            id: rectangle_drawer
+            color: "white"
+            anchors.fill: parent
+            Label{
+                id:creator_label
+                width: 186
+                height: 16
+                text: "Designed and Developed"
+                font.italic: true
+                font.bold: true
+                font.family: "Times New Roman"
+                horizontalAlignment: Text.AlignHCenter
+                anchors.top: parent.top
+                anchors.topMargin: 0.22 * rectangle_drawer.height
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+            Image {
+                id: image_dev
+                source: "vtk.png"
+                anchors.top: parent.top
+                anchors.topMargin: 0.28 * rectangle_drawer.height
+                anchors.horizontalCenter: parent.horizontalCenter
+                width: 145
+                height: 145
+                visible: true
+                antialiasing: false
+            }
+            Label{
+                id: creator_name
+                width: 186
+                height: 33
+                text: " Vtk ☺"
+                font.bold: true
+                font.pointSize: 21
+                font.family: "Verdana"
+                horizontalAlignment: Text.AlignHCenter
+                anchors.top: parent.top
+                anchors.topMargin: 0.62 * rectangle_drawer.height
+                anchors.horizontalCenter: parent.horizontalCenter
+            }
+        }
+    }
+
     SwipeView {
         id: swipeView
+        font.italic: false
+        font.bold: false
         anchors.fill: parent
         currentIndex: tabBar.currentIndex
 
         Loader
         {
+            id: loader
             active: SwipeView.isCurrentItem||SwipeView.isPreviousItem||SwipeView.isNextItem
             sourceComponent: Welcome_page {
                 anchors.fill:window

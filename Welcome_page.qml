@@ -11,7 +11,7 @@ Page {
 
     RoundButton {
         id: roundButton
-        x: 45
+        x: 48
         y: 25
         width: 33
         height: 34

@@ -37,7 +37,7 @@ ApplicationWindow {
                 id: image_dev
                 source: "vtk.png"
                 anchors.top: parent.top
-                anchors.topMargin: 0.28 * rectangle_drawer.height
+                anchors.topMargin: 0.30 * rectangle_drawer.height
                 anchors.horizontalCenter: parent.horizontalCenter
                 width: 145
                 height: 145
@@ -54,7 +54,7 @@ ApplicationWindow {
                 font.family: "Verdana"
                 horizontalAlignment: Text.AlignHCenter
                 anchors.top: parent.top
-                anchors.topMargin: 0.62 * rectangle_drawer.height
+                anchors.topMargin: 0.65 * rectangle_drawer.height
                 anchors.horizontalCenter: parent.horizontalCenter
             }
         }

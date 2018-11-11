@@ -5,8 +5,8 @@ import QtQuick.VirtualKeyboard 2.3
 ApplicationWindow {
     id: window
     visible: true
-    width: 700
-    height: 450
+    width: 800
+    height: 480
     title: qsTr("Tabs")
 
     Drawer {

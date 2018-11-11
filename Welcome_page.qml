@@ -4,8 +4,8 @@ import QtQuick.Controls.Material 2.2
 
 Page {
     id: page
-    width: 701
-    height: 450
+    width: 800
+    height: 480
     font.family: "Courier"
     font.pointSize: 26
 
@@ -22,24 +22,17 @@ Page {
 
     Rectangle {
         id: rectangle
-        x: 136
+        x: 184
         y: 103
         width: 508
         height: 283
         color: "transparent"
-        anchors.right: parent.right
-        anchors.rightMargin: 57
+        anchors.verticalCenterOffset: 34
+        anchors.verticalCenter: parent.verticalCenter
 
         Column {
             id: column
-            anchors.right: parent.right
-            anchors.rightMargin: -5
-            anchors.left: parent.left
-            anchors.leftMargin: 0
-            anchors.bottom: parent.bottom
-            anchors.bottomMargin: 0
-            anchors.top: parent.top
-            anchors.topMargin: 8
+            anchors.fill: parent
 
             Text {
                 id: text1
@@ -65,7 +58,7 @@ Page {
 
             Text {
                 id: text2
-                text: qsTr("         Welcome to Vanika")
+                text: qsTr("        Welcome to Vanika")
                 font.family: "Ubuntu"
                 font.italic: false
                 verticalAlignment: Text.AlignVCenter
@@ -96,9 +89,9 @@ Page {
         SwitchDelegate {
             id: switchDelegate
             text: checked ? " Auto" : "Manual"
-            anchors.leftMargin: 45
+            anchors.leftMargin: 91
             anchors.topMargin: 0
-            anchors.rightMargin: -31
+            anchors.rightMargin: -77
             anchors.bottomMargin: 0
             font.pixelSize: 18
             anchors.fill: parent

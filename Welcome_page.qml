@@ -58,7 +58,7 @@ Page {
 
             Text {
                 id: text2
-                text: qsTr("        Welcome to Vanika")
+                text: qsTr("       Welcome to Vanika")
                 font.family: "Ubuntu"
                 font.italic: false
                 verticalAlignment: Text.AlignVCenter

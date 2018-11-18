@@ -2,12 +2,13 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>Welcome_page.qml</file>
-        <file>Members_page.ui.qml</file>
+        <file>Members_page.qml</file>
         <file>main.qml</file>
         <file>qtquickcontrols2.conf</file>
         <file>PhotoGallery_page.ui.qml</file>
         <file>Controls_page.ui.qml</file>
         <file>Events_page.ui.qml</file>
         <file>vtk.png</file>
+        <file>Member_frame.qml</file>
     </qresource>
 </RCC>
